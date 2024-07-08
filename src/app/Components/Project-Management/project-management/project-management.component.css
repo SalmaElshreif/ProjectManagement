@@ -1,0 +1,468 @@
+* {
+    box-sizing: border-box;
+}
+
+.icon-container {
+    position: fixed;
+    top: 1rem;
+    width: 100%; 
+    display: flex; 
+    justify-content: space-between; 
+    z-index: 1000;
+    padding: 0 1rem; 
+}
+
+.homeIcon {
+    font-size: 2rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.icon {
+    font-size: 2rem;
+    color: #ffffff;
+    cursor: pointer; 
+    transition: color 0.3s ease; 
+    margin-right: 20px;
+}
+.backIcon{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: #007bff;
+}
+
+h1{
+    text-align: center;
+    margin-top: 1rem;
+    font-family: 'Bona Nova SC';
+    color: rgb(148, 147, 147);
+   }
+
+   .buttons{
+    text-align: center;
+    margin-top: 2rem;
+   }
+   
+
+.btn {
+    background-color: gray; 
+    color: white; 
+    border: none; 
+    border-radius: 2px;
+    width: 12rem;
+    margin: 0.5rem; 
+    font-size: 1rem; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid #ffffff; 
+}
+
+.btn:hover {
+    background-color: #28a745; 
+}
+
+
+
+  .extra-buttons {
+    text-align: center;
+    margin-top: 2rem;
+    padding-left: 25rem;
+}
+
+.twoBtn {
+    background-color: rgb(60, 59, 59); 
+    opacity: 0.5rem;
+    color: white; 
+    font-size: 1rem; 
+    cursor: pointer; 
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.btn-extra {
+    background-color: #1e1f1f;
+    color: white;
+    border: 1px solid #f3f1f1; 
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    margin: 1.5rem;
+    width: 10rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: rgba(255, 255, 255, 0.2) 7px 7px 29px 7px;
+}
+
+.name,.price,.time{
+    direction: rtl;
+    background-color: black;
+    padding-right: 1rem;
+    border: 1px solid rgb(223, 221, 221);
+    color: rgb(223, 221, 221);
+}
+
+.inputs-container {
+    margin-top: 2rem;
+    text-align: right;
+    padding-right: 3rem;
+
+}
+
+.input-single {
+    width: 15rem;
+    max-width: 400px; 
+    margin-bottom: 1rem; 
+}
+
+.error-message {
+    color: red;
+  }
+
+.input-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: right;
+    text-align: right;
+}
+
+.input-half {
+    flex: 1;
+    max-width: 112px; 
+}
+
+.message-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: right; 
+    margin: 2rem 0; 
+    padding-right: 3rem;
+    flex-wrap: wrap;
+}
+
+.message {
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+    font-size: 1rem;
+    text-align: center;
+    width: 100px; 
+    border: 1px solid #ddd; 
+    background-color: black;
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+}
+
+.message-container-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.custom-checkbox {
+    background: none;
+    border: 2px solid #a9a7a7; 
+    width: 24px; 
+    height: 24px; 
+    cursor: pointer;
+    appearance: none; 
+    position: relative;
+}
+
+
+
+.custom-checkbox:checked::after {
+    content: "";
+    position: absolute;
+    left: 5px; 
+    top: 0px; 
+    width: 10px; 
+    height: 14px; 
+    border: solid rgb(12, 152, 12); 
+    border-width: 0 3px 3px 0; 
+    transform: rotate(45deg); 
+}
+
+
+.plus {
+    color: #007bff;
+    border: 1px solid #ddd;
+}
+
+.multi {
+    color: purple;
+    border: 1px solid #ddd;
+}
+
+.single {
+    color: rgb(255, 136, 0);
+    border: 1px solid #ddd;
+}
+
+.download-text {
+    text-align: right; 
+    margin-top: 2rem; 
+    font-size: 1rem; 
+    color: #7e7d7d; 
+    direction: rtl;
+    padding-right: 3rem;
+}
+
+.download-link {
+    color: #007bff; 
+}
+
+
+.playstation-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: right; 
+    /* margin: 1rem 0;  */
+    padding-right: 3rem;
+    flex-wrap: wrap;
+    direction: rtl;
+    cursor: pointer;
+}
+
+.playstation {
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+    font-size: 1rem;
+    text-align: center;
+    width: 110px; 
+    height: 85px;
+    border: 1px solid #ddd; 
+    background-color: white;
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+}
+
+.playStationInput{
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+    border: none;
+}
+
+.playStationDeviceId{
+    font-weight: bold;
+}
+
+.playstation-container-item {
+    /* display: flex; */
+    /* flex-direction: column; */
+    align-items: center;
+    /* position: relative; */
+}
+
+.playstation-container-item-wrapper {
+    display: flex;
+    align-items: center; 
+    gap: 0.5rem; 
+    /* margin-right: 330px; */
+    margin-left: 130px; 
+    margin-right: auto; 
+}
+
+.playStationName{
+    font-size: 0.75rem;
+    color: #7e7d7d;
+    position: relative;
+}
+
+.playStationCode{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: black;
+}
+
+
+
+.playStationIcon {
+    font-size: 1.5rem;
+    color: #333;
+    position: absolute;
+    bottom: 0; 
+    right: 0; 
+}
+
+.playStationIconClose{
+    font-size: 1.5rem;
+    color: #333;
+    position: absolute;
+    top: 0; 
+    left: 0; 
+}
+
+.d-flex {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 1rem;
+    flex-wrap: wrap;
+    text-align: right;
+}
+
+
+.left {
+    flex: 2;
+    text-align: right;
+    margin: 0;
+}
+
+.right {
+    flex: 6;
+    text-align: right;
+}
+
+.inputs-container, .message-container, .playstation-container {
+    text-align: right;
+}
+
+.playstation{
+    margin-top: 20px;
+}
+
+.playstationInput{
+    margin-right: 330px;
+}
+
+.playstation-button {
+    background-color: rgb(65, 216, 65); 
+    color: black; 
+    border: none; 
+    border-radius: 50%; 
+    padding: 0.5rem 1rem; 
+    font-size: 20px; 
+    font-weight: bold;
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+}
+
+.playstation-button:hover {
+    background-color: rgb(43, 181, 43); 
+}
+
+.message-container-left {
+    gap: 1rem;
+    margin: 2rem 0; 
+    flex-wrap: wrap;
+    text-align: right;
+}
+
+.messageLeftSingle, .messageLeftMulti, .messageLeftPlus {
+    background-color: #f0f0f0;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    width: 100px; 
+    border: 1px solid #ddd; 
+    background-color: black;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+.singleLeft, .multiLeft, .plusLeft{
+    color: #abaaaa;
+}
+
+
+.new-playstation-button {
+    background-color: green; 
+    color: white;
+    border: none; 
+    border-radius: 0.25rem; 
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem; 
+    font-weight: bold;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    margin-left: 150px; 
+    margin-right: auto; 
+    width: 12rem;
+    border: 1px solid #ddd; 
+    height: 50px;
+
+}
+
+.new-playstation-button:hover {
+    background-color: rgb(7, 155, 7); 
+}
+
+
+@media (max-width: 768px) {
+    .extra-buttons {
+        padding-left: 0;
+        margin-top: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .input-single {
+        width: 100%;
+    }
+
+    .input-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .input-half {
+        max-width: 100%;
+    }
+
+    .message-container {
+        padding-right: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .message {
+        width: auto;
+    }
+
+    .extra-buttons {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        font-size: 0.9rem;
+    }
+
+    .btn-extra {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .message {
+        font-size: 1rem;
+    }
+
+    .playstation {
+        width: 80px;
+        height: 60px;
+    }
+
+    .playStationUnderText {
+        font-size: 1.2rem;
+    }
+
+    .playstation-button {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+}

@@ -1,0 +1,103 @@
+<div class="icon-container">
+  <i class="fa-solid fa-arrow-turn-up fa-rotate-270 backIcon" style="color: #c6c5c5;"></i>
+  <i class="pi pi-home homeIcon"></i>
+</div>
+
+<div class="container">
+  <h1>PROJECT MANAGEMENT</h1>
+
+  <div class="buttons">
+    <button class="btn">الأجهزه الذكية</button>
+    <button class="btn">الطلبات</button>
+    <button class="btn">مشتريات ومصروفات</button>
+    <button class="btn">إضافه</button>
+  </div>
+
+  <div class="extra-buttons">
+    <button class="twoBtn btn-extra">طرابيزة</button>
+    <button class="twoBtn btn-extra">لعب</button>
+  </div>
+
+  <div class="d-flex">
+    
+    <div class="left">
+      <div class="message-container-left">
+        <div class="d-flex">
+          <input class="messageLeftSingle singleLeft" [(ngModel)]="singleValue" [disabled]="!singleChecked">
+          <div class="messageLeftSingle single">Single</div>
+        </div>
+        <div class="d-flex">
+          <input class="messageLeftMulti multiLeft" [(ngModel)]="multiValue" [disabled]="!multiChecked">
+          <div class="messageLeftMulti multi">Multi</div>
+        </div>
+        <div class="d-flex">
+          <input class="messageLeftPlus plusLeft" [(ngModel)]="plusValue" [disabled]="!plusChecked">
+          <div class="messageLeftPlus plus">Plus</div>
+        </div>
+      </div>
+    </div>
+
+    <p-divider class="dividerLeft" layout="vertical"></p-divider>
+
+    <div class="right">
+      <div class="d-flex">
+        <div class="playstation-container-item-wrapper">
+          <button (click)="resetButton()" class="playstation-button">+</button>
+          <div class="playstation-container-item">
+            <div class="playstation">
+              <input [(ngModel)]="name" placeholder="PlayStation" class="playStationInput playStationName" />
+              <input [(ngModel)]="deviceID" placeholder="8" class="playStationInput playStationDeviceId" />
+            </div>
+          </div>
+        </div>
+        <div class="flex-item">
+          <div class="inputs-container">
+            <input placeholder="الاسم" class="input-single name" [(ngModel)]="name" (ngModelChange)="checkNameExists($event)"/>
+            <div *ngIf="nameExistsError" class="error-message">
+              هذا الاسم موجود مسبقًا، يرجى إدخال اسم آخر.
+            </div>
+            <div class="input-group">
+              <input placeholder="الوقت" class="input-half time" [(ngModel)]="time" type="text" />
+              <input placeholder="السعر" class="input-half price" [(ngModel)]="price" type="text" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="message-container">
+        <div class="message-container-item">
+          <div class="message plus">Plus</div>
+          <input type="checkbox" [(ngModel)]="plusChecked" class="custom-checkbox" />
+        </div>
+        <div class="message-container-item">
+          <div class="message multi">Multi</div>
+          <input type="checkbox" [(ngModel)]="multiChecked" class="custom-checkbox" />
+        </div>
+        <div class="message-container-item">
+          <div class="message single">Single</div>
+          <input type="checkbox" [(ngModel)]="singleChecked" class="custom-checkbox" />
+        </div>
+      </div>
+
+      <div class="d-flex d-p">
+        <button class="new-playstation-button" (click)="!selectedDevice ? addDevice() : updateDevice()">OK</button>
+
+        <div class="download-section">
+          <p class="download-text">
+            تحميل QR للعميل <a href="" class="download-link">Download</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="playstation-container">
+        <div *ngFor="let device of devices" class="playstation-container-item" (click)="onSelectDevice(device.deviceID)">
+          <div class="playstation playStationName">
+            <i class="fa-sharp fa-solid fa-xmark playStationIconClose" style="color: #e51506;" (click)="deleteDevice(device.deviceID)"></i>
+            {{ device.name }}
+            <p class="playStationCode">{{ device.deviceID }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
